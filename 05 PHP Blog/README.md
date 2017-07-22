@@ -5,5 +5,7 @@ The blog is ready to be presented as a homework. Every form is working fine, you
 "\app\Resources\views" 
 
 and 
+
 "C:\xampp\htdocs\Blog\Blog\src\SoftUniBlogBundle". 
+
 Enjoy.
