@@ -1,0 +1,30 @@
+﻿@model Blog.Models.Article
+@using Microsoft.AspNet.Identity;
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="container">
+    <article>
+        <header>
+            <h2>
+                @Model.Title
+            </h2>
+        </header>
+        <p>
+            @Model.Description
+        </p>
+        <small class="author">
+            posted by: <b>@Model.Author.FullName</b> ~ posted on: <b>@Model.Date</b>
+        </small>
+        <footer class="pull-right">
+            @if (User.Identity.IsAuthenticated && (User.IsInRole("Admin") || Model.IsAuthor(User.Identity.GetUserId())))
+            {
+                @Html.ActionLink("Edit", "Edit", "Article", new { @id = Model.Id }, new { @class = "btn btn-success btn-xs" })
+                @Html.ActionLink("Delete", "Delete", "Article", new { @id = Model.Id }, new { @class = "btn btn-danger btn-xs" })
+            }
+            @Html.ActionLink("Back", "Index", "Article", null, new { @class = "btn btn-default btn-xs" })
+        </footer>
+    </article>
+</div>
