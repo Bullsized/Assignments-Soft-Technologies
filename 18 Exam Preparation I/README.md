@@ -6,6 +6,6 @@ EXAM PREPARATION I - TODO LIST
 
 03 Java - added just the \src\main\java\todolist folders. Need to import the project with IntelliJ, otherwise it refuses to start.
 
-04 C# - added just the \Models and \Controllers folders. Everything else you can get from the skeleton and Visual Studio will download the rest.
+04 C# - added just the \Models and \Controllers folders. You can get everything else from the skeleton and Visual Studio will download the rest.
 
 Enjoy.
